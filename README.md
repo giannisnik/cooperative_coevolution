@@ -7,5 +7,5 @@ The algorithm appears in "A Cooperative Coevolutionary Approach to Function Opti
 
 Five functions are available: RASTRIGIN, SCHWEFEL, GRIEWANGK, ACKLEY and ROSENBROCK
  
-Compile: gcc cooperative_coevolution -lm -o cooperative_coevolution
+Compile: gcc cooperative_coevolution -lm -o cooperative_coevolution<br />
 Demo: ./cooperative_coevolution RASTRIGIN
