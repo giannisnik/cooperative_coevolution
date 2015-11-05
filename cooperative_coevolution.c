@@ -24,11 +24,30 @@ void mutate_species_population(char**);
 char** recombine_species_population(char**);
 void CCGA(int);
 
-int main()
+int main(int argc, char *argv[])
 {
-    CCGA(RASTRIGIN);
-    //GA(ROSENBROCK);
-
+	
+	if(argc == 2) {
+		if(strcmp(argv[1],"RASTRIGIN") == 0)
+	    	CCGA(RASTRIGIN);
+	    else if(strcmp(argv[1],"SCHWEFEL") == 0)
+	    	CCGA(SCHWEFEL);
+	    else if(strcmp(argv[1],"GRIEWANGK") == 0)
+	    	CCGA(GRIEWANGK);
+	    else if(strcmp(argv[1],"ACKLEY") == 0)
+	    	CCGA(ACKLEY);
+	    else if(strcmp(argv[1],"ROSENBROCK") == 0)
+	    	CCGA(ROSENBROCK);	
+	    else
+	    	printf("Give a valid function.\n");
+   	}
+   	else if(argc > 2) {
+      	printf("Too many arguments supplied.\n");
+   	}
+   	else {
+      	printf("One argument expected.\n");
+   	}
+    
     return 0;
 }
 
